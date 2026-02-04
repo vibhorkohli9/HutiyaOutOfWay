@@ -1,4 +1,10 @@
-# HutiyaOutOfWay Chaos Log
+from datetime import datetime
+from pathlib import Path
 
-This file records the system's daily mutations, doomsday ticks, and entropy events.
+log_file = Path("CHANGELOG.md")
 
+time = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
+log_text = f"## [{time}]\n- Chaos ticked.\n\n"
+
+# Append to the file
+log_file.open("a").write(log_text)
