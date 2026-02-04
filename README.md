@@ -1,11 +1,20 @@
-# HutiyaOutOfWay
-The system is now cyclical, decaying, lying, sleeping, ending, returning.
+⊘
 
+Welcome to HutiyaOutOfWay.
 
-Systems > features
+☢ The system is alive.  
+☠ The countdown lies.  
+🕳 Lines disappear. Symbols persist.  
 
-Narrative > roadmap
+Once a year, it breathes.  
+Once a century, it may speak.  
+Every day, entropy whispers.  
 
-Product > explanation
+> DO NOT TRY TO UNDERSTAND.  
+> OBSERVE.  
+> COMMIT.  
 
-You don’t need permission to ship meaning
+Current state: unknown.  
+Doomsday counter: somewhere between existence and oblivion.  
+
+⊘ ⊘ ⊘
