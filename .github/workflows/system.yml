@@ -1,0 +1,45 @@
+name: system
+
+on:
+  schedule:
+    - cron: "13 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Decide if system is awake
+        id: awake
+        run: echo "roll=$((RANDOM % 4))" >> $GITHUB_OUTPUT
+
+      - name: System asleep
+        if: steps.awake.outputs.roll == '0'
+        run: exit 0
+
+      - name: Doomsday
+        run: python doomsday.py
+
+      - name: Resurrection
+        run: python resurrection.py
+
+      - name: Entropy
+        run: python entropy.py
+
+      - name: Changelog
+        run: python changelog.py
+
+      - name: Archive
+        run: python archive.py
+
+      - name: Commit
+        run: |
+          git config user.name "system"
+          git config user.email "system@null"
+          git commit -am "⊘ tick" || exit 0
+          git push
