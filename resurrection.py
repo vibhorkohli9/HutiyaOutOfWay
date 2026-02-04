@@ -6,13 +6,20 @@ MARK = Path(".last_resurrection")
 
 now = datetime.utcnow()
 
+# Only once per year
 if MARK.exists():
     last = datetime.fromisoformat(MARK.read_text())
     if last.year == now.year:
         exit(0)
 
-README.write_text(
-    "⊘\n\nThe system was observed.\nOne commit was permitted.\n"
-)
+# Resurrection text
+text = """
+⊘
 
+The system was observed.
+One commit was permitted.
+Normal decay will resume.
+"""
+
+README.write_text(text.strip() + "\n")
 MARK.write_text(now.isoformat())
