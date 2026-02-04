@@ -2,8 +2,8 @@ name: system
 
 on:
   schedule:
-    - cron: "13 2 * * *"
-  workflow_dispatch:
+    - cron: "13 2 * * *"  # runs once a day at 2:13 UTC
+  workflow_dispatch:       # allows manual trigger
 
 permissions:
   contents: write
